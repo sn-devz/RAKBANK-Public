@@ -6,14 +6,12 @@ import ResultDescription from "components/ResultDescription/ResultDescription";
 import ResultButtons from "components/ResultButtons/ResultButtons";
 import ScoreBreakdown from "components/ScoreBreakdown/ScoreBreakdown";
 import useResultData from "hooks/useResultData";
-import useFadeAnimation from "hooks/useFadeAnimation";
 import { styles } from "./style";
 import { ResultScreenNavigationProp } from "./type";
 
 const ResultScreen = () => {
   const navigation = useNavigation<ResultScreenNavigationProp>();
   const { result, answers, fadeAnim, handleRestart } = useResultData();
-  const { fadeIn } = useFadeAnimation();
 
   // Render null if no result, to match test expectation
   if (!result) {

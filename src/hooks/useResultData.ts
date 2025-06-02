@@ -3,7 +3,6 @@ import { Animated } from 'react-native';
 import { RootState } from '../store';
 import { QUESTIONS, RISK_PROFILE_RANGES } from '../constants/questions';
 import { useEffect, useState } from 'react';
-import { RiskProfileResult, Answer } from '../types';
 import { resetQuestionnaire } from '../store/questionnaireSlice';
 import { UseResultData } from './type';
 

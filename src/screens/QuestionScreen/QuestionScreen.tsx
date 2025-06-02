@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import { ScrollView, SafeAreaView } from "react-native";
 import ProgressBar from "../../components/ProgressBar/ProgressBar";
 import QuestionCard from "../../components/QuestionCard/QuestionCard";
 import QuestionOption from "../../components/QuestionOption/QuestionOption";

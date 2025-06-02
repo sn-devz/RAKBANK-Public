@@ -2,8 +2,6 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import WelcomeScreen from "../screens/OnboardingScreen/OnboardingScreen";
 
-import { useSelector } from "react-redux";
-import { RootState } from "../store";
 import QuestionScreen from "screens/QuestionScreen/QuestionScreen";
 import ResultScreen from "screens/ResultScreen/ResultScreen";
 
@@ -16,10 +14,6 @@ export type RootStackParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 
 const AppNavigator = () => {
-  const isCompleted = useSelector(
-    (state: RootState) => state.questionnaire.isCompleted
-  );
-
   return (
     <Stack.Navigator
       initialRouteName="Welcome"
