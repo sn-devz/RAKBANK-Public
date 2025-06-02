@@ -2,6 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react-native";
 import DurationInfo from "../DurationInfo";
 import { ONBOARDING_CONSTANTS } from "../../../constants/onboarding";
+import { colors } from "../../../utils/colors";
 
 describe("DurationInfo", () => {
   it("renders without crashing", () => {
@@ -38,6 +39,9 @@ describe("DurationInfo", () => {
     const text = getByText(
       ONBOARDING_CONSTANTS.DURATION_INFO.MULTIPLE.replace("{count}", "3")
     );
-    expect(text.props.style).toEqual({ fontSize: 14, color: "#666" });
+    expect(text.props.style).toEqual({
+      fontSize: 14,
+      color: colors.text.secondary,
+    });
   });
 });
