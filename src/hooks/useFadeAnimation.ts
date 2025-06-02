@@ -1,17 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { Animated } from 'react-native';
-
-interface UseFadeAnimationProps {
-  initialValue?: number;
-  duration?: number;
-  useNativeDriver?: boolean;
-}
-
-interface UseFadeAnimationReturn {
-  fadeAnim: Animated.Value;
-  fadeIn: () => void;
-  fadeOut: () => void;
-}
+import { UseFadeAnimationProps, UseFadeAnimationReturn } from './type';
 
 const useFadeAnimation = ({
   initialValue = 0,

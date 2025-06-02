@@ -5,15 +5,8 @@ import { QUESTIONS, RISK_PROFILE_RANGES } from '../constants/questions';
 import { useEffect, useState } from 'react';
 import { RiskProfileResult, Answer } from '../types';
 import { resetQuestionnaire } from '../store/questionnaireSlice';
+import { UseResultData } from './type';
 
-interface UseResultData {
-  result: RiskProfileResult | null;
-  answers: Answer[];
-  maxScore: number;
-  getScoreRangeText: (riskProfile: string) => string;
-  fadeAnim: Animated.Value;
-  handleRestart: () => void;
-}
 
 const useResultData = (): UseResultData => {
   const { result, answers } = useSelector((state: RootState) => state.questionnaire);

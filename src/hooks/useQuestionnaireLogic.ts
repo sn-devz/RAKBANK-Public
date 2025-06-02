@@ -3,7 +3,6 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { useDispatch, useSelector } from "react-redux";
 import { QUESTIONS } from "../constants/questions";
 import { Answer } from "../types";
-import { RootStackParamList } from "../navigation/AppNavigator";
 import { RootState } from "../store";
 import {
   answerQuestion,
@@ -12,10 +11,7 @@ import {
   completeQuestionnaire,
 } from "../store/questionnaireSlice";
 
-type QuestionScreenNavigationProp = StackNavigationProp<
-  RootStackParamList,
-  "Question"
->;
+import { QuestionScreenNavigationProp } from './type';
 
 const useQuestionnaireLogic = () => {
   const dispatch = useDispatch();
